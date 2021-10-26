@@ -4,73 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>航海王</title>
+    <title>尚未完成，持續更新</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <style>
-	html,body{
+	html,body {
 	    scroll-behavior: smooth; 
 	    box-sizing: border-box; 
 	}
-/*--------------------------------------------------------------
-# 加載頁面
---------------------------------------------------------------*/
-.loader_bg {
-    position: fixed;
-    z-index: 999;
-    background: white;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-  }
-  
-.loader {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: calc(50vh - 50px);
-    left: calc(50vw - 50px);
-}
-/*--------------------------------------------------------------
-# Swiper
---------------------------------------------------------------*/
-.swiper-button-next:after, .swiper-button-prev:after{
-    font-size:14px !important;
-}
-.swiper-button-next {
-    right: 10;
-}
-.swiper-button-prev {
-    left: 10;
-}
-.swiper-button-next, .swiper-button-prev {
-    z-index: 30;
-    background-size: 10px auto;
-    transition: border-color 0.3s;
-    border: 1px solid black;
-    background: #fff;
-    border-radius: 50%;
-    width: 40px !important;
-    height: 40px !important;
-    color:black !important;
-}
-.swiper-button-next:hover, .swiper-button-prev:hover{
-    background:#444 !important;
-    color:white !important;
-}
-/*--------------------------------------------------------------
-# RWD
---------------------------------------------------------------*/
-@media screen and (max-width: 769px) {
-    .ground-right {
-        width: 170px !important;
-        height: 250px !important;
-        bottom: 30px;
+    /*--------------------------------------------------------------
+    # 加載頁面
+    --------------------------------------------------------------*/
+    .loader_bg {
+        position: fixed;
+        z-index: 999;
+        background: white;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+      }
+      
+    .loader {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: calc(50vh - 50px);
+        left: calc(50vw - 50px);
     }
-}
+    /*--------------------------------------------------------------
+    # Swiper
+    --------------------------------------------------------------*/
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size:14px !important;
+    }
+    .swiper-button-next {
+        right: 10;
+    }
+    .swiper-button-prev {
+        left: 10;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        z-index: 30;
+        background-size: 10px auto;
+        transition: border-color 0.3s;
+        border: 1px solid #fff;
+        background: #fff;
+        border-radius: 50%;
+        width: 40px !important;
+        height: 40px !important;
+        color:black !important;
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover{
+        background:#444 !important;
+        color:white !important;
+    }
+    /*--------------------------------------------------------------
+    # RWD
+    --------------------------------------------------------------*/
+    @media screen and (max-width: 769px) {
+        .ground-right {
+            width: 170px !important;
+            height: 250px !important;
+            bottom: 30px;
+        }
+    }
     </style>
 </head>
 <body>
+<!-- 加載畫面 -->
 <div class="loader_bg">
         <div class="loader">
         <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -352,7 +353,6 @@
             </div>
         </div>
 
-
         </div>
     </section>
     <footer class="py-10 flex justify-center items-center text-sm font-light" style="background-color: #252525;color: #a7a6a6">
@@ -370,7 +370,8 @@
     <p class="text-center text-xs">Copyright © Tsume 2010-2019</p>
     </div>
 </footer>
-<!-- Back to Top -->
+
+<!-- 返回頂部 -->
     <div class="bg-gray-600" x-data="topBtn">
         <button @click="scrolltoTop" id="topButton"
             class="fixed z-10 hidden p-3 bg-gray-100 rounded-full shadow-md bottom-10 right-10 animate-bounce">
@@ -381,6 +382,7 @@
         </button>
     </div>
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -406,20 +408,19 @@
 
     }
 
-
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  slidesPerView: 1,
-  breakpoints: {
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 0
-    }
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 0
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 
     });
 </script>
