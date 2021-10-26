@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>航海王</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+	html,body{
+	    scroll-behavior: smooth; 
+	    box-sizing: border-box; 
+	}
+/*--------------------------------------------------------------
+# 加載頁面
+--------------------------------------------------------------*/
+.loader_bg {
+    position: fixed;
+    z-index: 999;
+    background: white;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+  }
+  
+.loader {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 50px);
+    left: calc(50vw - 50px);
+}
+/*--------------------------------------------------------------
+# Swiper
+--------------------------------------------------------------*/
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size:14px !important;
+}
+.swiper-button-next {
+    right: 10;
+}
+.swiper-button-prev {
+    left: 10;
+}
+.swiper-button-next, .swiper-button-prev {
+    z-index: 30;
+    background-size: 10px auto;
+    transition: border-color 0.3s;
+    border: 1px solid black;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    color:black !important;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    background:#444 !important;
+    color:white !important;
+}
+/*--------------------------------------------------------------
+# RWD
+--------------------------------------------------------------*/
+@media screen and (max-width: 769px) {
+    .ground-right {
+        width: 170px !important;
+        height: 250px !important;
+        bottom: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="loader_bg">
+        <div class="loader">
+        <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+            <rect x="20" y="50" width="4" height="10" fill="#333">
+                <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="30" y="50" width="4" height="10" fill="#333">
+                <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="40" y="50" width="4" height="10" fill="#333">
+                <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+        </svg>
+        </div>
+</div>
+<div class="wrap">
+    <!-- 背景 -->
+    <section 
+    class="w-screen h-screen bg1 relative overflow-hidden flex justify-center items-center flex-wrap bg-cover bg-center" 
+    style="background-image: url(https://www.tsume-art.com/storage/app/media/ikigai/site/fond-top-ikigai-4.png);">
+    <div 
+    class="mx-w-full flex justify-center items-center flex-col md:flex-row">
+        <!-- 櫻花動畫 -->
+        <div 
+        class="w-full h-full absolute top-0 left-0 z-10 overflow-hidden pointer-events-none mix-blend-screen">
+            <video class="absolute bottom-0 w-full" src="https://www.tsume-art.com/storage/app/media/ikigai/op/PERONA_PARTICULES_LOOP.mp4" autoplay="" playsinline="" webkit-playsinline="" muted="" loop="" style=""></video>
+        </div>
+        <!-- 人物 -->
+        <div 
+        class="relative w-full lg:w-3/5">
+            <img 
+            class="" 
+            style="width: 104%;max-width: 150%;left:60%;"
+            src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png" >
+        </div>
+        <!-- 按鈕 右邊區塊 -->
+        <div 
+        class="relative w-full lg:w-2/5 bottom-80 md:bottom-20 flex items-center flex-col"
+        style="z-index: 2;">
+            <div class="flex justify-center items-center">
+                <img 
+                class="max-w-full" 
+                style="width: 130px;margin-top: 40px;margin-bottom: 20px;" 
+                src="https://www.tsume-art.com/storage/app/media/ikigai/site/ikigai-logo.png">
+            </div>
+
+            <div
+            class="mx-atuo text-white flex justify-center items-center"
+            style="font-size: 35px;font-weight: 400;text-transform: uppercase;max-width: 550px;">
+                <b>PERONA </b>
+                <img 
+                class="max-w-full" 
+                style="width: 95px;margin-left: 10px;" 
+                src="https://www.tsume-art.com/storage/app/media/ikigai/site/label-ikigai.png">
+            </div>
+
+            <div 
+            class="bg-white rounded-md px-6 py-8 my-6 flex items-center text-left flex-col"
+            style="width: 350px">
+
+                <div class="w-full">
+                    <p class="text-3xl font-medium text-gray-900">315,38 €<small class="text-xs font-thin text-gray-400"> Excl. tax</small></p>
+                    <p class="text-xl mb-3 font-thin text-gray-400">Or from <span class="text-2xl font-medium text-gray-900">39,43</span> €/month</p>
+                </div>
+                    <a href=""
+                    class="w-full px-2 py-3 text-center rounded-md text-white tracking-widest cursor-not-allowed"
+                    style="background-color: #DC3F5B">SOLD OUT</a>
+                <div>
+                    <p class="text-sm underline my-3 text-gray-900">Add me to the waiting list</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="block w-full" style="height: 8px;background-color: #FFADD7;"></div>
+
+    <section>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a data-fslightbox href="https://i.imgur.com/fsyrScY.jpg">
+                <img src="https://www.tsume-art.com/storage/app/uploads/public/6cb/df0/fdc/thumb__0x752_0_0_crop.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/8cf/6f0/e2c/thumb__0x752_0_0_crop.jpg">
+                <img src="https://www.tsume-art.com/storage/app/uploads/public/6cb/df0/fdc/thumb__0x752_0_0_crop.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-fslightbox href="https://i.imgur.com/fsyrScY.jpg">
+                <img src="https://www.tsume-art.com/storage/app/uploads/public/6cb/df0/fdc/thumb__0x752_0_0_crop.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-fslightbox href="https://i.imgur.com/fsyrScY.jpg">
+                <img src="https://www.tsume-art.com/storage/app/uploads/public/6cb/df0/fdc/thumb__0x752_0_0_crop.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-fslightbox href="https://i.imgur.com/fsyrScY.jpg">
+                <img src="https://www.tsume-art.com/storage/app/uploads/public/6cb/df0/fdc/thumb__0x752_0_0_crop.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-fslightbox href="https://i.imgur.com/fsyrScY.jpg">
+                <img src="https://www.tsume-art.com/storage/app/uploads/public/6cb/df0/fdc/thumb__0x752_0_0_crop.jpg">
+                </a>
+            </div>
+          </div>
+ 
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+    </section>
+
+    <div class="block w-full" style="height: 4px;background-color: #FFADD7;"></div>
+
+    <!-- 金邊圖框 -->
+    <section class="flex justify-center items-center bg-black">
+        <!-- 背景 -->
+        <div class="flex justify-center items-center flex-wrap md:max-w-7xl" style="margin: 150px 20px;background: linear-gradient(29deg, #ae9876 0%, #F0E8CE 28%, #ae9876 44%, #ebd7a8 70%, #F0E8CE 75%, #ae9876 100%);">
+            <!-- 左圖 -->
+            <div class="w-full md:w-2/3 relative text-center" style="padding: 65px 40px 40px 40px;">
+                <div class="flex justify-center">
+                <img  src="https://www.tsume-art.com/storage/app/media/ikigai/site/ULTIMATE-LABEL.png" style="width: 350px">
+                </div>
+
+                <div class="my-6 font-bold text-2xl">1 IN 5 CHANCE TO GET ONE!</div>
+
+                <div class="text-md px-10">Do you like surprises? Enjoy an ultra collector one with the Ultimate Edition! A different version of the Ikigai statue with one or more modifications compared to the initial Regular Edition and a print run that will not exceed 20% of the limited edition! Want to know more? Here we go!</div>
+
+                <a href="">
+                    <div class="my-6 m-auto text-white" style="border-radius: 10px;font-weight: 600;background-color: #613288;padding: 5px 20px;width: fit-content;">KNOW MORE</div>
+                </a>
+            </div>
+            <!-- 右圖 -->
+            <div 
+            class="w-full md:w-1/3 relative flex justify-center items-center" 
+            style="height: 250px;">
+                <div 
+                class="absolute overflow-hidden inline-block bg-contain bg-no-repeat transform md:rotate-6 rotate-0 ground-right"
+                style="background-image: url(https://www.tsume-art.com/storage/app/media/ikigai/op/CARTE_GROUND.jpg);width: 290px;height: 422px;box-shadow: 0px 0px 87px -15px #ffffff9c;">
+                    <div class="" style="left: 200px"></div>
+                </div>
+            </div>
+            <!-- 右圖 -->
+
+        </div>
+    </section>
+
+    <!-- 影片展示 -->
+<!--     <section class="">
+        <iframe src="https://www.lightmatrix3d.com/model/?id=figurine&unlit=true" class="w-full h-screen relative">
+    </iframe>
+    </section> -->
+
+    <!-- 人物 -->
+    <section 
+    class="bg-black relative flex justify-center items-stretch flex-wrap p-0 w-full text-white shadow-none"
+    style="index: 2">
+        <div
+        class="flex flex-wrap justify-center items-center order-last"
+        style="width: 1200px;margin-top: 40px;">
+            <div 
+            class="pointer-events-none p-0 w-full md:w-5/12 md:hidden flex justify-center">
+                <img src="https://www.tsume-art.com/storage/app/media/ikigai/op/PERONA-FACE-SANS-SOCLE.png" 
+                class="max-w-full"
+                style="width: 350px;margin-bottom: -100px;">
+            </div>
+            <div
+            class="w-full md:w-7/12 p-0  flex justify-center items-center flex-wrap z-10"
+            style="max-width: 750px">
+                <div
+                class="text-center mt-0"
+                style="margin-bottom: 50px;font-size: 30px;">
+                    <img src="https://www.tsume-art.com/storage/app/media/ikigai/site/one-piece.png" class="max-w-full"
+                     style="width: 235px;margin: 15px;">
+                     <div 
+                     class="w-full flex justify-center">
+                        <img src="https://www.tsume-art.com/storage/app/media/ikigai/site/limited_edition.png" class="max-w-full" style="width: 200px">
+                     </div>
+                </div>
+                <div
+                class="text-justify px-10"
+                style="font-weight: 400;font-size: 15px;margin-bottom: 20px;">
+                    <div 
+                    class="text-right italic">
+                        <i>« I wanna become a flea… I wanna become a mite… <br>- What? What happened?! I… I… I wanna become a louse… »</i> -The Marines
+                    </div>
+                    <br>
+                    This<b>Ikigai statue shows Perona</b> rescuing the Straw Hat Pirates on the Sabaody Archipelago. As Luffy, Zoro, and Sanji make their way to the Thousand Sunny, the Ghost Princess helps them by fending off the Marines with her “Negatives Hollows”. Her ghostly look coincides with the aspect of her phosphorescent grimacing ghosts, dressed in her black and white dress and top hat, enhanced by her pink varnish, boots, watch, long twisted hair and bat tattoo. Her candid side hides a much more sordid reality, holding her stuffed toy resembling Kumashi in one arm, her huge round black eyes gaze with delight at the Navy’ men on whom she projects with her free arm her hungry ghosts in transparent resin! These specters are now swooping down on their prey to wrest any desire to live from them, the best way to enchant the dreaded former commander of the Wild Zombies!
+                </div>
+                <div
+                class="w-full text-center"
+                style="color: #757575;font-size: 14px;">
+                ©Eiichiro Oda/Shueisha, Toei Animation
+                </div>
+                <div 
+                class="flex my-3">
+                    <button 
+                    class="btn my-3 rounded-md px-6 py-1 mr-1 cursor-not-allowed"
+                    style="background-color: rgb(220,63,91);">SOLD OUT</button>
+                    <p
+                    class="underline text-xs">Add me to the waiting list</p>
+                </div>
+                <div
+                class="w-full flex justify-center"
+                style="margin: 20px;">
+                    <img src="https://www.tsume-art.com/storage/app/media/ikigai/site/LOGO_TOEI.png" class="w-full" style="width: 95px;">
+                </div>
+            </div>
+            <div 
+            class="pointer-events-none p-0 w-full md:w-5/12 hidden md:flex">
+                <img src="https://www.tsume-art.com/storage/app/media/ikigai/op/PERONA-FACE-SANS-SOCLE.png" 
+                class="max-w-full"
+                style="margin-bottom: 40px;">
+            </div>
+        </div>
+    </section>
+
+    <div class="block w-full bg-white" style="height: 4px;"></div>
+
+    <!-- 尺寸模型 -->
+    <section 
+    class="bg-black w-full relative flex justify-center items-center flex-wrap text-white z-10" 
+    style="padding-top: 80px;padding-bottom: 80px;">
+        <div 
+        class="p-0 f m-auto flex justify-center items-center flex-wrap"
+        style="width: 1200px;">
+        <div
+        class="w-1/2 flex justify-center items-center flex-wrap"
+        style="">
+            <div 
+            class="mt-0" 
+            style="color: #ffffffbf;font-size:30px">CHARACTERISTICS</div>
+
+            <div 
+            class="block w-full text-center" 
+            style="padding: 20px">
+            <b>Artistic Direction, Concept Art, Paint:</b>Tsume Team in collaboration with Anaïs BARBEAU</div>
+
+            <div class="text-center" style="width: 150px;font-size: 14px;font-weight: 500;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-01.png" style="filter: invert(1);width: 100px;">
+                <br>
+                Polyresin
+            </div>
+            <div class="text-center" style="width: 150px;font-size: 14px;font-weight: 500;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-02.png" style="filter: invert(1);width: 100px;">
+                <br>
+                1/6<sup>th</sup>
+            </div>
+            <div class="text-center" style="width: 150px;font-size: 14px;font-weight: 500;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-03.png" style="filter: invert(1);width: 100px;">
+                <br>
+                18 x 36 x 32 cm
+            </div>
+            <div class="text-center" style="width: 150px;font-size: 14px;font-weight: 500;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-04.png" style="filter: invert(1);width: 100px;">
+                <br>
+                Q4 2022 - Q3 2023
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+    <footer class="py-10 flex justify-center items-center text-sm font-light" style="background-color: #252525;color: #a7a6a6">
+    <div class="max-w-3xl ">
+    <p class="italic px-14 md:px-0 my-12">* : All our products are collectible statues, not toys, they are for people aged 14 and older. All parts are manufactured in limited edition. The statues offered for sale are those presented on the website of the TSUME LTD. within the limit of available stocks. Descriptions, information and photographs presenting the figures are the most accurate reproduction possible, but are for illustrative purposes and have no contractual value. In an effort to constantly improve the quality of its products, the TSUME LTD. may have to have to change the patterns of its products.</p>
+
+    <div class="text-center text-xs">
+        <a href="" class="underline">Cookie Policy</a>
+        -
+        <a href="" class="underline">Terms of sale</a>
+    </div>
+
+    <p class="text-center text-xs my-1">All rights reserved. All other logos, products and company names mentioned are trademarks of their respective owners.</p>
+
+    <p class="text-center text-xs">Copyright © Tsume 2010-2019</p>
+    </div>
+</footer>
+<!-- Back to Top -->
+    <div class="bg-gray-600" x-data="topBtn">
+        <button @click="scrolltoTop" id="topButton"
+            class="fixed z-10 hidden p-3 bg-gray-100 rounded-full shadow-md bottom-10 right-10 animate-bounce">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                </path>
+            </svg>
+        </button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
+<script>
+    setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+    },500);
+
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('topBtn', () => ({
+            scrolltoTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        }));
+    });
+
+    var topBtn = document.getElementById("topButton");
+    window.onscroll = function () {
+        (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ?
+        topBtn.classList.remove("hidden"): topBtn.classList.add("hidden");
+
+    }
+
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  slidesPerView: 1,
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 0
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+    });
+</script>
+
+</body>
+</html>
