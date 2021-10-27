@@ -8,31 +8,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
     <style>
+    /*--------------------------------------------------------------
+    # 
+    --------------------------------------------------------------*/
 	html,body {
 	    scroll-behavior: smooth; 
 	    box-sizing: border-box; 
 	}
-    /*--------------------------------------------------------------
-    # 加載頁面
-    --------------------------------------------------------------*/
-    .loader_bg {
-/*        position: fixed;
-        z-index: 999;
-        background: black;*/
-/*        opacity: 0.5;*/
-/*        width: 100%;
-        height: 100%;*/
-      }
-      
-    .loader {
-/*        width: 150px;
-        height: 150px;*/
-/*        position: absolute;*/
-/*        top: calc(50vh - 50px);
-        left: calc(50vw - 50px);*/
-    }
     /*--------------------------------------------------------------
     # Swiper
     --------------------------------------------------------------*/
@@ -136,29 +119,7 @@
 <!-- 加載畫面 -->
 <div class="loader_bg w-screen h-screen fixed bg-black z-50 flex justify-center items-center opacity-50">
         <div class="absolute">
-<!--         <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-            <rect x="20" y="50" width="4" height="10" fill="#fff">
-                <animateTransform attributeType="xml"
-                attributeName="transform" type="translate"
-                values="0 0; 0 20; 0 0"
-                begin="0" dur="0.6s" repeatCount="indefinite" />
-            </rect>
-            <rect x="30" y="50" width="4" height="10" fill="#fff">
-                <animateTransform attributeType="xml"
-                attributeName="transform" type="translate"
-                values="0 0; 0 20; 0 0"
-                begin="0.2s" dur="0.6s" repeatCount="indefinite" />
-            </rect>
-            <rect x="40" y="50" width="4" height="10" fill="#fff">
-                <animateTransform attributeType="xml"
-                attributeName="transform" type="translate"
-                values="0 0; 0 20; 0 0"
-                begin="0.4s" dur="0.6s" repeatCount="indefinite" />
-            </rect>
-        </svg> -->
-        <img src="https://www.tsume-art.com/storage/app/media/ikigai/site/one-piece.png" width="150px" height="60px">
-
+            <img src="https://www.tsume-art.com/storage/app/media/ikigai/site/one-piece.png" width="150px" height="60px">
         </div>
 </div>
 <div class="wrap">
@@ -205,10 +166,12 @@
         <!-- 人物 -->
         <div 
         class="relative w-full lg:w-3/5">
-            <img 
-            class="" 
+        <img class="lozad" data-src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png">
+<!--             <img 
+            class="loazd" 
             style="width: 104%;max-width: 150%;left:60%;"
-            src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png" data-aos="fade-right" data-aos-delay="500">
+            data-src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png" 
+            data-aos="fade-right" data-aos-delay="500"> -->
         </div>
         <!-- 按鈕 右邊區塊 -->
         <div 
@@ -258,39 +221,45 @@
         <div class="swiper">
           <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-lazy">
                 <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/7a4/199/277/thumb__0x752_0_0_crop.jpg"
                 data-type="image" class="cursor-zoom-in">
                 <img src="https://www.tsume-art.com/storage/app/uploads/public/7a4/199/277/thumb__0x752_0_0_crop.jpg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-lazy">
                 <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/8cf/6f0/e2c/thumb__0x752_0_0_crop.jpg" data-type="image" class="cursor-zoom-in">
                 <img src="https://www.tsume-art.com/storage/app/uploads/public/8cf/6f0/e2c/thumb__0x752_0_0_crop.jpg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-lazy">
                 <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/2ab/794/85c/thumb__0x752_0_0_crop.jpg"
                 data-type="image" class="cursor-zoom-in">
                 <img src="https://www.tsume-art.com/storage/app/uploads/public/2ab/794/85c/thumb__0x752_0_0_crop.jpg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-lazy">
                 <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/d79/ecd/33b/thumb__0x752_0_0_crop.jpg"
                 data-type="image" class="cursor-zoom-in">
                 <img src="https://www.tsume-art.com/storage/app/uploads/public/d79/ecd/33b/thumb__0x752_0_0_crop.jpg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-lazy">
                 <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/677/15c/bb6/thumb__0x752_0_0_crop.jpg"
                 data-type="image" class="cursor-zoom-in">
                 <img src="https://www.tsume-art.com/storage/app/uploads/public/677/15c/bb6/thumb__0x752_0_0_crop.jpg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-lazy">
                 <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/e3d/74c/599/thumb__0x752_0_0_crop.jpg"
                 data-type="image" class="cursor-zoom-in">
                 <img src="https://www.tsume-art.com/storage/app/uploads/public/e3d/74c/599/thumb__0x752_0_0_crop.jpg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </a>
             </div>
           </div>
@@ -310,7 +279,9 @@
             <!-- 左圖 -->
             <div class="w-full md:w-2/3 relative text-center" style="padding: 65px 40px 40px 40px;">
                 <div class="flex justify-center">
-                <img  src="https://www.tsume-art.com/storage/app/media/ikigai/site/ULTIMATE-LABEL.png" style="width: 350px">
+                <img  
+                src="https://www.tsume-art.com/storage/app/media/ikigai/site/ULTIMATE-LABEL.png" 
+                style="width: 350px">
                 </div>
 
                 <div class="my-6 font-bold text-1xl md:text-2xl">1 IN 5 CHANCE TO GET ONE!</div>
@@ -515,7 +486,12 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
 <script>
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+
     setTimeout(function(){
         $('.loader_bg').fadeToggle();
     },900);
@@ -551,7 +527,8 @@
     });
 
     const swiper = new Swiper('.swiper', {
-      loop: true,
+     lazy: true,
+     loop: true,
       slidesPerView: 1,
       breakpoints: {
         640: {
