@@ -278,7 +278,7 @@
     <div class="block w-full" style="height: 1px;background-color: #FFADD7;"></div>
 
     <!-- 金邊圖框 -->
-    <section class="flex justify-center items-center bg-black">
+    <section class="bg2 flex justify-center items-center bg-black">
         <!-- 背景 -->
         <div class="flex justify-center items-center flex-wrap md:max-w-7xl" style="margin: 150px 20px;background: linear-gradient(29deg, #ae9876 0%, #F0E8CE 28%, #ae9876 44%, #ebd7a8 70%, #F0E8CE 75%, #ae9876 100%);">
             <!-- 左圖 -->
@@ -314,14 +314,23 @@
 
     <!-- 影片展示 -->
     <section class="bg-black relative flex justify-center items-center">
+        <div class="relative w-full md:w-2/3 h-screen">
+        <a id="q1" class="cursor-pointer absolute top-20 right-10 text-gray-600 z-50 rounded-full h-12 w-12 flex items-center justify-center bg-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg></a>
+        <a id="q2" class="cursor-pointer absolute top-40 right-10 text-gray-600 z-50 rounded-full h-12 w-12 flex items-center justify-center bg-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg></a>
+s
         <iframe src="https://www.lightmatrix3d.com/model/?id=figurine&unlit=true" 
-        class="w-full md:w-2/3 h-screen">
+        class="w-full h-screen relative">
+        </div>
     </iframe>
     </section>
 
     <!-- 人物 -->
     <section 
-    class="bg-black relative flex justify-center items-stretch flex-wrap p-0 w-full text-white shadow-none"
+    class="bg3 bg-black relative flex justify-center items-stretch flex-wrap p-0 w-full text-white shadow-none"
     style="index: 2">
         <div
         class="flex flex-wrap justify-center items-center order-last"
@@ -548,6 +557,15 @@
       },
 
     });
+
+
+        $('#q1').click(function(){     
+          $('html,body').animate({scrollTop: $('.bg2').offset().top }, 'slow');    
+        });  
+        $('#q2').click(function(){     
+          $('html,body').animate({scrollTop: $('.bg3').offset().top }, 'slow');    
+         });  
+
 
 </script>
 
