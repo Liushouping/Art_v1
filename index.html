@@ -70,6 +70,66 @@
             bottom: 30px;
         }
     }
+    /*--------------------------------------------------------------
+    # 泡泡動畫
+    --------------------------------------------------------------*/
+    .bubbles img{
+        width: 50px;
+        animation: bubble 7s linear infinite;
+    }
+
+    .bubbles{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        bottom: -70px;
+    }
+
+    @keyframes bubble{
+        0%{
+            transform: translateY(0);
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        70%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(-80vh);
+            opacity: 0;
+        }
+    }
+
+    .bubbles img:nth-child(1){
+        animation-delay: 2s;
+        width: 20px;
+    }
+    .bubbles img:nth-child(2){
+        animation-delay: 1s;
+        width: 30px;
+    }
+    .bubbles img:nth-child(3){
+        animation-delay: 3s;
+    }
+    .bubbles img:nth-child(4){
+        animation-delay: 4.5s;
+        width: 40px;
+    }
+    .bubbles img:nth-child(5){
+        animation-delay: 3s;
+        width: 20px;
+    }
+    .bubbles img:nth-child(6){
+        animation-delay: 6s;
+        width: 25px;
+    }
+    .bubbles img:nth-child(7){
+        animation-delay: 7s;
+    }
     </style>
 </head>
 <body>
@@ -113,7 +173,7 @@
             </svg>
            </button>
          </div>
-         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white ">
+         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white">
            <button class="mobile-menu-button rounded-lg md:hidden focus:outline-none focus:shadow-outline z-30 absolute top-7 right-7" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
               <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -341,6 +401,16 @@
                 class="max-w-full"
                 style="margin-bottom: 40px;">
             </div>
+
+            <div class="bubbles">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            <img src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            </div>
         </div>
     </section>
 
@@ -365,23 +435,23 @@
             style="padding: 20px">
             <b>Artistic Direction, Concept Art, Paint:</b>Tsume Team in collaboration with Anaïs BARBEAU</div>
 
-            <div class="text-center md:w-36 w-1/2 font-medium" style="font-size: 14px;">
-                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-01.png" style="filter: invert(1);width: 100px;">
+            <div class="text-center md:w-36 w-1/2 font-medium filter invert" style="font-size: 14px;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-01.png" style="width: 100px;">
                 <br>
                 Polyresin
             </div>
-            <div class="text-center md:w-36 w-1/2 font-medium" style="font-size: 14px;">
-                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-02.png" style="filter: invert(1);width: 100px;">
+            <div class="text-center md:w-36 w-1/2 font-medium filter invert" style="font-size: 14px;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-02.png" style="width: 100px;">
                 <br>
                 1/6<sup>th</sup>
             </div>
-            <div class="text-center md:w-36 w-1/2 font-medium" style="font-size: 14px;">
-                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-03.png" style="filter: invert(1);width: 100px;">
+            <div class="text-center md:w-36 w-1/2 font-medium filter invert" style="font-size: 14px;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-03.png" style="width: 100px;">
                 <br>
                 18 x 36 x 32 cm
             </div>
-            <div class="text-center md:w-36 w-1/2 font-medium" style="font-size: 14px;">
-                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-04.png" style="filter: invert(1);width: 100px;">
+            <div class="text-center md:w-36 w-1/2 font-medium filter invert" style="font-size: 14px;">
+                <img class="max-w-full m-auto" src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-04.png" style="width: 100px;">
                 <br>
                 Q4 2022 - Q3 2023
             </div>
@@ -390,7 +460,7 @@
 
         </div>
     </section>
-    
+
     <footer class="py-10 flex justify-center items-center text-sm font-light" style="background-color: #252525;color: #a7a6a6">
     <div class="max-w-3xl w-4/5">
     <p class="italic md:px-0 my-12 text-justify">* : All our products are collectible statues, not toys, they are for people aged 14 and older. All parts are manufactured in limited edition. The statues offered for sale are those presented on the website of the TSUME LTD. within the limit of available stocks. Descriptions, information and photographs presenting the figures are the most accurate reproduction possible, but are for illustrative purposes and have no contractual value. In an effort to constantly improve the quality of its products, the TSUME LTD. may have to have to change the patterns of its products.</p>
