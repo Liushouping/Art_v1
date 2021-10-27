@@ -7,6 +7,7 @@
     <title>尚未完成，持續更新</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
 	html,body {
 	    scroll-behavior: smooth; 
@@ -99,7 +100,7 @@
 </div>
 <div class="wrap">
     <div class="antialiased">
-      <div class="w-full text-gray-700 bg-black">
+      <div class="w-full text-gray-700 bg-none absolute">
         <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl md:px-4 px-0 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
 
          <div class="flex flex-row items-center justify-between p-4">
@@ -118,10 +119,10 @@
               <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
            </button>
-           <a class="px-4 py-3 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="">HOME</a>
-           <a class="px-4 py-3 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="">SHOP</a>
-           <a class="px-4 py-3 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="">ACCOUNT</a>
-           <a class="px-4 py-1 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="">CART</a>
+           <a class="px-4 py-3 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="" data-aos="fade-right" data-aos-delay="500">HOME</a>
+           <a class="px-4 py-3 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="" data-aos="fade-right" data-aos-delay="600">SHOP</a>
+           <a class="px-4 py-3 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="" data-aos="fade-right" data-aos-delay="700">ACCOUNT</a>
+           <a class="px-4 py-1 mt-2 text-xl md:text-sm font-semibold bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300" href="" data-aos="fade-right" data-aos-delay="800">CART</a>
          </nav>
 
         </div>
@@ -144,7 +145,7 @@
             <img 
             class="" 
             style="width: 104%;max-width: 150%;left:60%;"
-            src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png" >
+            src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png"  data-aos="fade-right" data-aos-delay="500">
         </div>
         <!-- 按鈕 右邊區塊 -->
         <div 
@@ -152,13 +153,15 @@
         style="z-index: 2;">
             <div class="flex justify-center items-center">
                 <img 
-                class="max-w-full md:w-32 w-16 md:mt-12 mt-28 md:mb-10 mb-4" 
+                class="max-w-full md:w-32 w-16 md:mt-12 mt-28 md:mb-10 mb-4"
+                data-aos="zoom-in" data-aos-delay="500" 
                 src="https://www.tsume-art.com/storage/app/media/ikigai/site/ikigai-logo.png">
             </div>
 
             <div
             class="mx-atuo text-white flex justify-center items-center"
-            style="font-size: 35px;font-weight: 400;text-transform: uppercase;max-width: 550px;">
+            style="font-size: 35px;font-weight: 400;text-transform: uppercase;max-width: 550px;"
+            data-aos="zoom-in" data-aos-delay="500">
                 <b>PERONA </b>
                 <img 
                 class="max-w-full" 
@@ -168,7 +171,7 @@
 
             <div 
             class="bg-white rounded-md px-6 py-8 my-6 flex items-center text-left flex-col"
-            style="width: 350px">
+            style="width: 350px" data-aos="zoom-in" data-aos-delay="1000">
 
                 <div class="w-full">
                     <p class="text-3xl font-medium text-gray-900">315,38 €<small class="text-xs font-thin text-gray-400"> Excl. tax</small></p>
@@ -417,10 +420,18 @@
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     setTimeout(function(){
         $('.loader_bg').fadeToggle();
     },500);
+
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
 
     document.addEventListener('alpine:init', () => {
         Alpine.data('topBtn', () => ({
