@@ -516,7 +516,7 @@
 <script>
     setTimeout(function(){
         $('.loader_bg').fadeToggle();
-    },1500);
+    },6000);
 
     AOS.init({
       duration: 1000,
@@ -541,11 +541,9 @@
 
     }
 
-    // grab everything we need
     const btn = document.querySelector(".mobile-menu-button");
     const sidebar = document.querySelector(".sidebar");
 
-    // // add our event listener for the click
     btn.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-x-full");
     });
