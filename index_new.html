@@ -53,66 +53,6 @@
             bottom: 30px;
         }
     }
-    /*--------------------------------------------------------------
-    # 泡泡動畫
-    --------------------------------------------------------------*/
-    .bubbles img{
-        width: 50px;
-        animation: bubble 7s linear infinite;
-    }
-
-    .bubbles{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        bottom: -70px;
-    }
-
-    @keyframes bubble{
-        0%{
-            transform: translateY(0);
-            opacity: 0;
-        }
-        50%{
-            opacity: 1;
-        }
-        70%{
-            opacity: 1;
-        }
-        100%{
-            transform: translateY(-80vh);
-            opacity: 0;
-        }
-    }
-
-    .bubbles img:nth-child(1){
-        animation-delay: 2s;
-        width: 20px;
-    }
-    .bubbles img:nth-child(2){
-        animation-delay: 1s;
-        width: 30px;
-    }
-    .bubbles img:nth-child(3){
-        animation-delay: 3s;
-    }
-    .bubbles img:nth-child(4){
-        animation-delay: 4.5s;
-        width: 40px;
-    }
-    .bubbles img:nth-child(5){
-        animation-delay: 3s;
-        width: 20px;
-    }
-    .bubbles img:nth-child(6){
-        animation-delay: 6s;
-        width: 25px;
-    }
-    .bubbles img:nth-child(7){
-        animation-delay: 7s;
-    }
     </style>
 </head>
 <body>
@@ -171,7 +111,8 @@
             <div 
             class="flex justify-center items-center my-6">
                 <div 
-                class="text-4xl font-bold text-white drop-shadow-2xl">Allizart</div>
+                class="text-4xl font-bold text-white drop-shadow-2xl"
+                style="text-shadow: 3px 3px 3px #666;">Allizart</div>
                 <div 
                 class="bg-white px-4 py-0 rounded-lg font-bold text-3xl ml-3">Marvel</div>
             </div>
@@ -505,20 +446,20 @@
 <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
 <script>
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    const observer = lozad(); 
     observer.observe();
-
+    // *
     setTimeout(function(){
         $('.loader_bg').fadeToggle();
     },900);
-
+    // *
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
       once: true,
       mirror: false
     });
-
+    // *
     document.addEventListener('alpine:init', () => {
         Alpine.data('topBtn', () => ({
             scrolltoTop() {
@@ -527,21 +468,21 @@
             }
         }));
     });
-
+    // *
     var topBtn = document.getElementById("topButton");
     window.onscroll = function () {
         (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ?
         topBtn.classList.remove("hidden"): topBtn.classList.add("hidden");
 
     }
-
+    // *
     const btn = document.querySelector(".mobile-menu-button");
     const sidebar = document.querySelector(".sidebar");
 
     btn.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-x-full");
     });
-
+    // *
     const swiper = new Swiper('.swiper', {
      lazy: true,
      loop: true,
@@ -558,15 +499,13 @@
       },
 
     });
-
-
+    // *
     $('#Gotop').click(function(){     
         $('html,body').animate({scrollTop: $('.bg2').offset().top }, 'slow');    
     });  
     $('#Godown').click(function(){     
         $('html,body').animate({scrollTop: $('.bg3').offset().top }, 'slow');    
     });  
-    
 </script>
 
 </body>
