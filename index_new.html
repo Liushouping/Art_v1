@@ -57,11 +57,12 @@
 </head>
 <body>
 <!-- 加載畫面 -->
-<div class="loader_bg w-screen h-screen fixed bg-black z-50 flex justify-center items-center opacity-50">
+<div class="loader_bg w-screen h-screen fixed bg-black z-50 flex justify-center items-center">
         <div class="absolute">
             <img src="./image/one-piece.png" width="150px" height="60px">
         </div>
 </div>
+<!-- 導覽列 -->
 <div class="app">
     <div class="antialiased">
       <div class="w-full text-gray-700 bg-none absolute">
@@ -92,7 +93,6 @@
         </div>
       </div>
     </div>
-
     <!-- 背景 -->
     <section 
     class="h-screen bg1 relative overflow-hidden flex justify-center items-center flex-wrap bg-black">
@@ -147,7 +147,7 @@
         </div>
     </div>
     </section>
-
+    <!-- 模型尺寸 -->
     <section
     class="bg-black">
         <div
@@ -244,7 +244,7 @@
             </p>
         </div>
     </section>
-
+    <!-- 輪播圖 -->
     <section class="bg2">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -286,11 +286,9 @@
 
         </div>
     </section>
-
     <div 
     class="block w-full bg-yellow-400" 
     style="height: 4px;"></div>
-
     <!-- 影片展示 -->
     <section class="relative flex justify-center items-center"
     style="background-color: #2B2B2B;">
@@ -312,7 +310,6 @@
         </div>
     </iframe>
     </section>
-
     <!-- 人物 -->
     <section 
     class="bg3 bg-black relative flex justify-center items-stretch flex-wrap p-0 w-full text-white shadow-none">
@@ -381,11 +378,10 @@
             class="sm:flex hidden w-full md:w-1/2 relative">
                 <img 
                 data-src="./image/IMG_8714-removebg.png" 
-                class="lozad xl:h-screen xl:w-full xl:object-cover sm:h-96 sm:w-full sm:object-cover">
+                class="lozad xl:h-screen xl:w-full xl:object-cover sm:h-full sm:w-full sm:object-cover">
             </div>
         </div>
     </section>
-
     <!-- 影片 -->
     <section class="bg-black py-3">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -403,8 +399,10 @@
         <p
         class="text-white bg-black flex justify-center items-center px-10 py-3 text-justify text-base">The smoke, sounds and voices of the following video are only for promotional purposes. They are not included in the product.</p>
     </section>
-
-    <footer class="py-10 flex justify-center items-center text-sm font-light" style="background-color: #252525;color: #a7a6a6">
+    <!-- 尾部 -->
+    <footer 
+    class="py-10 flex justify-center items-center text-sm font-light" 
+    style="background-color: #252525;color: #a7a6a6">
         <div class="max-w-3xl w-4/5">
         <p class="italic md:px-0 my-12 text-justify">* : All our products are collectible statues, not toys, they are for people aged 14 and older. All parts are manufactured in limited edition. The statues offered for sale are those presented on the website of the TSUME LTD. within the limit of available stocks. Descriptions, information and photographs presenting the figures are the most accurate reproduction possible, but are for illustrative purposes and have no contractual value. In an effort to constantly improve the quality of its products, the TSUME LTD. may have to have to change the patterns of its products.</p>
 
@@ -419,7 +417,6 @@
         <p class="text-center text-xs">Copyright © Tsume 2010-2019</p>
         </div>
     </footer>
-
     <!-- 返回頂部 -->
         <div class="bg-gray-600" x-data="topBtn">
             <button @click="scrolltoTop" id="topButton"
@@ -431,14 +428,13 @@
             </button>
         </div>
     </div>
-
+<!-- 套件 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
 <script>
     const observer = lozad(); 
     observer.observe();
@@ -472,7 +468,6 @@
     // *
     const btn = document.querySelector(".mobile-menu-button");
     const sidebar = document.querySelector(".sidebar");
-
     btn.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-x-full");
     });
@@ -501,6 +496,5 @@
         $('html,body').animate({scrollTop: $('.bg3').offset().top }, 'slow');    
     });  
 </script>
-
 </body>
 </html>
