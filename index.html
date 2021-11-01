@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NNNNNNNNNNNNNNNNN</title>
+    <title>Allizart</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -53,76 +53,17 @@
             bottom: 30px;
         }
     }
-    /*--------------------------------------------------------------
-    # 泡泡動畫
-    --------------------------------------------------------------*/
-    .bubbles img{
-        width: 50px;
-        animation: bubble 7s linear infinite;
-    }
-
-    .bubbles{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        bottom: -70px;
-    }
-
-    @keyframes bubble{
-        0%{
-            transform: translateY(0);
-            opacity: 0;
-        }
-        50%{
-            opacity: 1;
-        }
-        70%{
-            opacity: 1;
-        }
-        100%{
-            transform: translateY(-80vh);
-            opacity: 0;
-        }
-    }
-
-    .bubbles img:nth-child(1){
-        animation-delay: 2s;
-        width: 20px;
-    }
-    .bubbles img:nth-child(2){
-        animation-delay: 1s;
-        width: 30px;
-    }
-    .bubbles img:nth-child(3){
-        animation-delay: 3s;
-    }
-    .bubbles img:nth-child(4){
-        animation-delay: 4.5s;
-        width: 40px;
-    }
-    .bubbles img:nth-child(5){
-        animation-delay: 3s;
-        width: 20px;
-    }
-    .bubbles img:nth-child(6){
-        animation-delay: 6s;
-        width: 25px;
-    }
-    .bubbles img:nth-child(7){
-        animation-delay: 7s;
-    }
     </style>
 </head>
 <body>
 <!-- 加載畫面 -->
-<div class="loader_bg w-screen h-screen fixed bg-black z-50 flex justify-center items-center opacity-50">
+<div class="loader_bg w-screen h-screen fixed bg-black z-50 flex justify-center items-center">
         <div class="absolute">
-            <img src="https://www.tsume-art.com/storage/app/media/ikigai/site/one-piece.png" width="150px" height="60px">
+            <img src="./image/one-piece.png" width="150px" height="60px">
         </div>
 </div>
-<div class="wrap">
+<!-- 導覽列 -->
+<div class="app">
     <div class="antialiased">
       <div class="w-full text-gray-700 bg-none absolute">
         <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl md:px-4 px-0 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -154,117 +95,188 @@
     </div>
     <!-- 背景 -->
     <section 
-    class="h-screen bg1 relative overflow-hidden flex justify-center items-center flex-wrap bg-cover bg-center" 
-    style="background-image: url(https://www.tsume-art.com/storage/app/media/ikigai/site/fond-top-ikigai-4.png);">
+    class="h-screen bg1 relative overflow-hidden flex justify-center items-center flex-wrap bg-black">
     <div 
-    class="mx-w-full flex justify-center items-center flex-col md:flex-row">
-        <!-- 櫻花動畫 -->
+    class="mx-w-6xl flex justify-center items-center">
+        <!-- 動畫 -->
         <div 
         class="w-full h-full absolute top-0 left-0 z-10 overflow-hidden pointer-events-none mix-blend-screen">
-            <video class="absolute bottom-0 w-full" src="https://www.tsume-art.com/storage/app/media/ikigai/op/PERONA_PARTICULES_LOOP.mp4" autoplay="" playsinline="" webkit-playsinline="" muted="" loop="" style=""></video>
+            <video 
+            class="absolute bottom-0 w-full" 
+            src="https://www.tsume-art.com/storage/app/media/ikigai/op/USOPP_PARTICULES_LOOP.mp4" 
+            autoplay="" playsinline="" webkit-playsinline="" muted="" loop="" style=""></video>
         </div>
         <!-- 人物 -->
         <div 
-        class="relative w-full lg:w-3/5">
-        <img 
-        class="lozad" 
-        data-src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png"
-        data-aos="fade-right" 
-        data-aos-delay="500">
-<!--             <img 
-            class="loazd" 
-            style="width: 104%;max-width: 150%;left:60%;"
-            data-src="https://www.tsume-art.com/storage/app/media/ikigai/op/perona-top.png" 
-            data-aos="fade-right" data-aos-delay="500"> -->
+        class="relative max-w-xl bottom-28 md:bottom-10">
+            <img 
+            class="lozad transform scale-125 ml-8 md:ml-0" 
+            data-src="./image/IMG_8713-removebg.png">
         </div>
-        <!-- 按鈕 右邊區塊 -->
+        <!-- 區塊 -->
         <div 
-        class="relative w-full lg:w-2/5 bottom-60 md:bottom-20 flex items-center flex-col"
-        style="z-index: 2;">
-            <div class="flex justify-center items-center">
-                <img 
-                class="max-w-full md:w-32 w-16 md:mt-12 mt-28 md:mb-10 mb-4 lozad"
-                data-aos="zoom-in" 
-                data-aos-delay="1000" 
-                data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/ikigai-logo.png">
-            </div>
-
-            <div
-            class="mx-atuo text-white flex justify-center items-center"
-            style="font-size: 35px;font-weight: 400;text-transform: uppercase;max-width: 550px;"
-            data-aos="zoom-in" data-aos-delay="300">
-                <b>PERONA </b>
-                <img 
-                class="max-w-full lozad" 
-                style="width: 95px;margin-left: 10px;" 
-                data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/label-ikigai.png">
+        class="absolute flex items-center bottom-24 flex-col">
+            <div 
+            class="flex justify-center items-center my-6">
+                <div 
+                class="text-4xl italic font-bold text-white drop-shadow-2xl"
+                style="text-shadow: 3px 3px 3px #666;">Allizart</div>
+                <div 
+                class="bg-white px-4 py-0 rounded-lg font-bold text-3xl ml-3">Marvel</div>
             </div>
 
             <div 
-            class="bg-white rounded-md px-6 py-8 my-6 flex items-center text-left flex-col"
-            style="width: 350px" data-aos="zoom-in" data-aos-delay="1200">
+            class="bg-white rounded-md md:p-6 p-4 flex items-center text-left flex-col"
+            style="width: 300px">
 
                 <div class="w-full">
-                    <p class="text-3xl font-medium text-gray-900">315,38 €<small class="text-xs font-thin text-gray-400"> Excl. tax</small></p>
-                    <p class="text-xl mb-3 font-thin text-gray-400">Or from <span class="text-2xl font-medium text-gray-900">39,43</span> €/month</p>
+                    <p class="text-3xl font-medium text-gray-900">315,38 €
+                        <small class="text-xs font-thin text-gray-400"> Excl. tax</small>
+                    </p>
+                    <p class="text-xl mb-3 font-thin text-gray-400">Or from 
+                        <span class="text-2xl font-medium text-gray-900">39,43</span> €/month
+                    </p>
                 </div>
                     <a href=""
                     class="w-full px-2 py-3 text-center rounded-md text-white tracking-widest cursor-not-allowed"
                     style="background-color: #DC3F5B">SOLD OUT</a>
                 <div>
-                    <p class="text-sm underline my-3 text-gray-900">Add me to the waiting list</p>
+                    <p class="text-sm underline my-1 text-gray-900">Add me to the waiting list</p>
                 </div>
             </div>
         </div>
     </div>
     </section>
+    <!-- 模型尺寸 -->
+    <section
+    class="bg-black">
+        <div
+        class="mx-w-6xl text-white flex justify-center items-center flex-col py-0">
+            <h1
+            class="text-5xl font-bold tracking-wider my-3">4000 PIECES</h1>
+            <div
+            class="hidden lg:flex max-w-6xl w-full justify-center items-center">
+                <div class="w-full flex flex-row justify-center items-center flex-wrap">
+                    <div
+                    class="p-2 border-l border-b border-r flex flex-row">
+                    <img 
+                    data-src="./image/picto-caracteristique-01.png"
+                    class="lozad filter invert mx-2" 
+                    width="30px">
+                    RESIN, PVC, LEDS, MAGNETS
+                    </div>
+                    <div
+                    class="p-2 border-b border-r flex flex-row">
+                    <img 
+                    data-src="./image/picto-caracteristique-02.png"
+                    class="lozad filter invert mx-2" 
+                    width="30px">
+                    1/4
+                    </div>
+                    <div
+                    class="p-2 border-l border-b border-r flex flex-row">
+                    <img 
+                    data-src="./image/picto-caracteristique-03.png"
+                    class="lozad filter invert mx-2" 
+                    width="30px">
+                    W: 47 CM x D: 52 CM x H: 76 CM
+                    </div>
+                    <div
+                    class="p-2 border-b border-r flex flex-row">
+                    <img 
+                    data-src="./image/picto-caracteristique-04.png"
+                    class="lozad filter invert mx-2" 
+                    width="30px">
+                    Q4 2022 / Q4 2023
+                    </div>
+                </div>
+            </div>
+            <p
+            class="hidden lg:flex text-base justify-center items-center my-6">
+                The statue comes with a numbered plate and a certificate of authenticity.
+            </p>
 
-    <div class="block w-full" style="height: 8px;background-color: #FFADD7;"></div>
+            <div
+            class="lg:hidden flex flex-col max-w-6xl w-full justify-center items-center mt-3 px-10">
+                <div 
+                class="flex flex-row w-full justify-center items-center border">
+                    <div
+                    class="p-2 flex flex-row w-1/2 text-xs justify-center items-center">
+                    <img 
+                    data-src="./image/picto-caracteristique-01.png"
+                    class="lozad filter invert mx-2" 
+                    width="30px">
+                    RESIN, PVC, LEDS, MAGNETS
+                    </div>
 
-    <section>
+                    <div
+                    class="p-2 flex flex-row w-1/2 text-xs justify-center items-center border-l">
+                    <img 
+                    data-src="./image/picto-caracteristique-02.png"
+                    class="lozad filter invert mx-2" 
+                    width="30px">
+                    1/4
+                    </div>
+                </div>
 
+                <div
+                class="p-2 flex flex-row w-full text-xs justify-center items-center border-l border-r border-b">
+                <img 
+                data-src="./image/picto-caracteristique-03.png"
+                class="lozad filter invert mx-2" 
+                width="30px">
+                W: 47 CM x D: 52 CM x H: 76 CM
+                </div>
+                <div
+                class="p-2 flex flex-row w-full text-xs justify-center items-center border-l border-r border-b">
+                <img 
+                data-src="./image/picto-caracteristique-04.png"
+                class="lozad filter invert mx-2" 
+                width="30px">
+                Q4 2022 / Q4 2023
+                </div>
+                    
+                </div>
+            </div>
+            <p
+            class="lg:hidden flex text-white text-base justify-center items-center px-10 py-6 text-center">
+                The statue comes with a numbered plate and a certificate of authenticity.
+            </p>
+        </div>
+    </section>
+    <!-- 輪播圖 -->
+    <section class="bg2">
         <div class="swiper">
           <div class="swiper-wrapper">
-
-            <div class="swiper-slide swiper-lazy">
-                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/7a4/199/277/thumb__0x752_0_0_crop.jpg"
-                data-type="image" class="cursor-zoom-in">
-                <img src="https://www.tsume-art.com/storage/app/uploads/public/7a4/199/277/thumb__0x752_0_0_crop.jpg">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="swiper-slide">
+                <a 
+                data-fslightbox href="./image/IMG_8712 (1).jpeg"
+                data-type="image" 
+                class="cursor-zoom-in">
+                <img src="./image/IMG_8712 (1).jpeg">
                 </a>
             </div>
-            <div class="swiper-slide swiper-lazy">
-                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/8cf/6f0/e2c/thumb__0x752_0_0_crop.jpg" data-type="image" class="cursor-zoom-in">
-                <img src="https://www.tsume-art.com/storage/app/uploads/public/8cf/6f0/e2c/thumb__0x752_0_0_crop.jpg">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="swiper-slide">
+                <a 
+                data-fslightbox href="./image/IMG_8715 (1).jpeg" data-type="image" 
+                class="cursor-zoom-in">
+                <img src="./image/IMG_8715 (1).jpeg">
                 </a>
             </div>
-            <div class="swiper-slide swiper-lazy">
-                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/2ab/794/85c/thumb__0x752_0_0_crop.jpg"
-                data-type="image" class="cursor-zoom-in">
-                <img src="https://www.tsume-art.com/storage/app/uploads/public/2ab/794/85c/thumb__0x752_0_0_crop.jpg">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="swiper-slide">
+                <a data-fslightbox 
+                href="./image/IMG_8714 (1).jpeg"
+                data-type="image" 
+                class="cursor-zoom-in">
+                <img src="./image/IMG_8714 (1).jpeg">
                 </a>
             </div>
-            <div class="swiper-slide swiper-lazy">
-                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/d79/ecd/33b/thumb__0x752_0_0_crop.jpg"
-                data-type="image" class="cursor-zoom-in">
-                <img src="https://www.tsume-art.com/storage/app/uploads/public/d79/ecd/33b/thumb__0x752_0_0_crop.jpg">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-            </div>
-            <div class="swiper-slide swiper-lazy">
-                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/677/15c/bb6/thumb__0x752_0_0_crop.jpg"
-                data-type="image" class="cursor-zoom-in">
-                <img src="https://www.tsume-art.com/storage/app/uploads/public/677/15c/bb6/thumb__0x752_0_0_crop.jpg">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-            </div>
-            <div class="swiper-slide swiper-lazy">
-                <a data-fslightbox href="https://www.tsume-art.com/storage/app/uploads/public/e3d/74c/599/thumb__0x752_0_0_crop.jpg"
-                data-type="image" class="cursor-zoom-in">
-                <img src="https://www.tsume-art.com/storage/app/uploads/public/e3d/74c/599/thumb__0x752_0_0_crop.jpg">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="swiper-slide">
+                <a 
+                data-fslightbox href="./image/IMG_8711 (1).jpeg"
+                data-type="image" 
+                class="cursor-zoom-in">
+                <img src="./image/IMG_8711 (1).jpeg">
                 </a>
             </div>
           </div>
@@ -274,51 +286,28 @@
 
         </div>
     </section>
-
-    <div class="block w-full" style="height: 1px;background-color: #FFADD7;"></div>
-
-    <!-- 金邊圖框 -->
-    <section class="bg2 flex justify-center items-center bg-black">
-        <!-- 背景 -->
-        <div class="flex justify-center items-center flex-wrap md:max-w-7xl" style="margin: 150px 20px;background: linear-gradient(29deg, #ae9876 0%, #F0E8CE 28%, #ae9876 44%, #ebd7a8 70%, #F0E8CE 75%, #ae9876 100%);">
-            <!-- 左圖 -->
-            <div class="w-full md:w-2/3 relative text-center" style="padding: 65px 40px 40px 40px;">
-                <div class="flex justify-center">
-                <img  
-                class="lozad" data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/ULTIMATE-LABEL.png" 
-                style="width: 350px">
-                </div>
-
-                <div class="my-6 font-bold text-1xl md:text-2xl">1 IN 5 CHANCE TO GET ONE!</div>
-
-                <div class="text-md text-center">Do you like surprises? Enjoy an ultra collector one with the Ultimate Edition! A different version of the Ikigai statue with one or more modifications compared to the initial Regular Edition and a print run that will not exceed 20% of the limited edition! Want to know more? Here we go!</div>
-
-                <a href="">
-                    <div class="my-6 m-auto text-white" style="border-radius: 10px;font-weight: 600;background-color: #613288;padding: 5px 20px;width: fit-content;">KNOW MORE</div>
-                </a>
-            </div>
-            <!-- 右圖 -->
-            <div 
-            class="w-full md:w-1/3 relative flex justify-center items-center animate-pulse delay-500" 
-            style="height: 250px;">
-                <div 
-                class="absolute overflow-hidden inline-block bg-contain bg-no-repeat transform md:rotate-6 rotate-0 ground-right"
-                style="background-image: url(https://www.tsume-art.com/storage/app/media/ikigai/op/CARTE_GROUND.jpg);width: 290px;height: 422px;box-shadow: 0px 0px 87px -15px #ffffff9c;">
-                    <div class="" style="left: 200px"></div>
-                </div>
-            </div>
-            <!-- 右圖 -->
-
-        </div>
-    </section>
-
+    <div 
+    class="block w-full bg-yellow-300" 
+    style="height: 4px;"></div>
     <!-- 影片展示 -->
-    <section class="bg-black relative flex justify-center items-center">
-        <div class="relative w-full md:w-2/3 h-screen">
-        <a id="Gotop" class="cursor-pointer absolute top-20 right-10 text-gray-600 z-50 rounded-full h-12 w-12 flex items-center justify-center bg-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+    <section class="relative flex justify-center items-center bg-black">
+        <div class="relative w-full md:max-w-6xl h-screen my-12">
+        <div class="md:px-4 md:text-left text-white my-6 text-center">
+            <h3
+            class="text-3xl font-bold">Marvel 3D</h3>
+            <p
+            class="text-xl font-thin">任意放大旋轉，用你最熟悉的視角。</p>
+        </div>
+        <a id="Gotop" 
+        class="cursor-pointer absolute bottom-20 left-10 text-gray-600 z-50 rounded-full h-12 w-12 flex items-center justify-center bg-white"
+        data-aos="zoom-in"
+        data-aos-delay="5000"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
         </svg></a>
-        <a id="Godown" class="cursor-pointer absolute top-40 right-10 text-gray-600 z-50 rounded-full h-12 w-12 flex items-center justify-center bg-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <a id="Godown" 
+        class="cursor-pointer absolute bottom-0 left-10 text-gray-600 z-50 rounded-full h-12 w-12 flex items-center justify-center bg-white"
+        data-aos="zoom-in"
+        data-aos-delay="5000"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
         </svg></a>
         <iframe src="https://www.lightmatrix3d.com/model/?id=figurine&unlit=true" 
@@ -326,163 +315,113 @@
         </div>
     </iframe>
     </section>
-
     <!-- 人物 -->
     <section 
-    class="bg3 bg-black relative flex justify-center items-stretch flex-wrap p-0 w-full text-white shadow-none"
-    style="index: 2">
+    class="bg3 bg-black relative flex justify-center items-stretch flex-wrap p-0 w-full text-white shadow-none">
         <div
-        class="flex flex-wrap justify-center items-center order-last"
-        style="width: 1200px;margin-top: 40px;">
+        class="flex flex-wrap justify-center items-center max-w-6xl mt-12">
             <div 
-            class="pointer-events-none p-0 w-full md:w-5/12 md:hidden flex justify-center">
-                <img data-src="https://www.tsume-art.com/storage/app/media/ikigai/op/PERONA-FACE-SANS-SOCLE.png" 
-                class="max-w-full lozad"
-                style="width: 350px;margin-bottom: -100px;">
+            class="sm:hidden flex w-full md:w-1/2 relative">
+                <div
+                class=" my-6">
+                <img 
+                data-src="./image/IMG_8714-removebg.png" 
+                class="lozad">
+                </div>
             </div>
             <div
-            class="w-full md:w-7/12 p-0  flex justify-center items-center flex-wrap z-10"
-            style="max-width: 750px">
+            class="w-full md:w-1/2 p-0  flex justify-center items-center flex-wrap z-10">
                 <div
-                class="text-center mt-0"
-                style="margin-bottom: 50px;font-size: 30px;">
-                    <img data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/one-piece.png" class="lozad max-w-full"
-                     style="width: 235px;margin: 15px;">
-                     <div 
-                     class="w-full flex justify-center">
-                        <img data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/limited_edition.png" class="lozad max-w-full" style="width: 200px">
-                     </div>
-                </div>
-                <div
-                class="text-justify px-10"
-                style="font-weight: 400;font-size: 15px;margin-bottom: 20px;">
+                class="text-justify px-10 font-normal mb-10 text-base">
                     <div 
-                    class="text-right italic">
-                        <i>« I wanna become a flea… I wanna become a mite… <br>- What? What happened?! I… I… I wanna become a louse… »</i> -The Marines
+                    class="text-left">
+                        <p>"You won’t kill me! You’re the one who’s going to die...!
+                        I can survive in the vacuum of space. How about you?!
+                        Ha ha ha (...) This planet is finished!!!!"
+                        - Frieza to Son Goku</p>
                     </div>
-                    <br>
-                    This<b>Ikigai statue shows Perona</b> rescuing the Straw Hat Pirates on the Sabaody Archipelago. As Luffy, Zoro, and Sanji make their way to the Thousand Sunny, the Ghost Princess helps them by fending off the Marines with her “Negatives Hollows”. Her ghostly look coincides with the aspect of her phosphorescent grimacing ghosts, dressed in her black and white dress and top hat, enhanced by her pink varnish, boots, watch, long twisted hair and bat tattoo. Her candid side hides a much more sordid reality, holding her stuffed toy resembling Kumashi in one arm, her huge round black eyes gaze with delight at the Navy’ men on whom she projects with her free arm her hungry ghosts in transparent resin! These specters are now swooping down on their prey to wrest any desire to live from them, the best way to enchant the dreaded former commander of the Wild Zombies!
-                </div>
-                <div
-                class="w-full text-center"
-                style="color: #757575;font-size: 14px;">
-                ©Eiichiro Oda/Shueisha, Toei Animation
-                </div>
-                <div 
-                class="flex my-3">
-                    <button 
-                    class="btn my-3 rounded-md px-6 py-1 mr-1 cursor-not-allowed"
-                    style="background-color: rgb(220,63,91);">SOLD OUT</button>
+                    <br><br>
+                    This typical landscape, with its luminous green water and blue hills, indicates that the Galactic Tyrant is on Namek, the home planet of the Nameless Namekian, where he travels with the aim of finding the Dragons Balls.
+                    <br><br>
+                    Greedily decimating every village on his way, we can see him here deploying all his strength to exterminate his fierce opponent: Son Goku!
+                    Determined to annihilate him, he finally sets out to destroy the entire planet in order to win his fight against the Super Saiyan.
+                    <br><br>
+                    Being able to survive in space, he will sacrifice any life on Namek’s surface, for his greatest pleasure! Thus, through his aura and in his final form, the sadistic tyrant creates an exponentially powerful Death Ball in transparent resin, in searing blood red tones, illuminated and surrounded by dark lightning. Respecting the very essence of Frieza, his pose, both iconic and unique, shows him carrying death at arm’s length. His murderous madness and visceral desire for total destruction animates his bloodthirsty gaze as he is preparing to annihilate this planet by projecting all his devastating power into its heart ...
+                    <br><br>
+                    Then, the dying planet turns into a ticking time bomb, which in only 5 minutes, will be defused and swallowed up by the inhospitable coldness and interstellar vacuum of space.
+                    The immeasurable power of the impact generates shock waves capable of lifting the ocean’s waters, here in transparent resin and green shades, while the magnificent mountain plains of this suffocating planet gradually crumble into the oblivion of the darkest, vastest and most bruised of all oceans, that of an infinite nothingness!
+
+                    <div 
+                    class="relative mt-12 w-full rounded-md text-center py-2 font-bold"
+                    style="background-color: rgb(220,63,91);">
+                        <a 
+                        href=""
+                        class="cursor-not-allowed">SOLD OUT</a>
+                    </div>
+
                     <p
-                    class="underline text-xs">Add me to the waiting list</p>
+                    class="text-base underline text-white my-3">Add me to the waiting list</p>
+
+                    <div
+                    class="flex justify-center items-center">
+                        <img 
+                        data-src="./image/DBZ.png"
+                        class="lozad mr-10" 
+                        style="width: 130px;height: 33px;">
+                        <img 
+                        data-src="./image/LOGO_TOEI.png" 
+                        class="lozad" 
+                        style="width: 95px;">
+                    </div>
+
+                    <p
+                    class="text-gray-100 font-thin text-center text-base mt-3">©Bird Studio/Shueisha, Toei Animation</p>
                 </div>
-                <div
-                class="w-full flex justify-center"
-                style="margin: 20px;">
-                    <img data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/LOGO_TOEI.png" class="lozad w-full" style="width: 95px;">
-                </div>
+
             </div>
             <div 
-            class="pointer-events-none p-0 w-full md:w-5/12 hidden md:flex">
-                <img data-src="https://www.tsume-art.com/storage/app/media/ikigai/op/PERONA-FACE-SANS-SOCLE.png" 
-                class="lozad max-w-full"
-                style="margin-bottom: 40px;">
-            </div>
-
-            <div class="bubbles">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
-                <img class="lozad" data-src="https://liushouping.github.io/Bubble-Animate/image/bubble.png">
+            class="sm:flex hidden w-full md:w-1/2 relative">
+                <img 
+                data-src="./image/IMG_8714-removebg.png" 
+                class="lozad xl:h-screen xl:w-full xl:object-cover sm:h-full sm:w-full sm:object-cover">
             </div>
         </div>
     </section>
-
-    <div class="block w-full bg-white" style="height: 4px;"></div>
-
-    <!-- 尺寸模型 -->
-    <section 
-    class="bg-black w-full relative flex justify-center items-center flex-wrap text-white z-10" 
-    style="padding-top: 80px;padding-bottom: 80px;">
-        <div 
-        class="p-0 f m-auto flex justify-center items-center flex-wrap"
-        style="width: 1200px;">
-        <div
-        class="w-full md:w-1/2 flex justify-center items-center flex-wrap"
-        style="">
-            <div 
-            class="mt-0" 
-            style="color: #ffffffbf;font-size:30px">CHARACTERISTICS</div>
-
-            <div 
-            class="block w-full text-center" 
-            style="padding: 20px">
-            <b>Artistic Direction, Concept Art, Paint:</b>Tsume Team in collaboration with Anaïs BARBEAU</div>
-
-            <div 
-            class="text-center md:w-36 w-1/2 font-medium" 
-            style="font-size: 14px;">
-                <img 
-                class="max-w-full m-auto filter invert lozad" 
-                data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-01.png" 
-                style="width: 100px;">
-                <br>
-                Polyresin
+    <!-- 影片 -->
+    <section class="bg-black py-3">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="w-full bg-white rounded-lg overflow-hidden">
+                <h3
+                class="text-white text-xl font-bold bg-black pb-6">MORE DETAILS</h3>
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/RYv8L-IgtTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div 
-            class="text-center md:w-36 w-1/2 font-medium" 
-            style="font-size: 14px;">
-                <img 
-                class="max-w-full m-auto filter invert lozad" 
-                data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-02.png" 
-                style="width: 100px;">
-                <br>
-                1/6<sup>th</sup>
-            </div>
-            <div 
-            class="text-center md:w-36 w-1/2 font-medium" 
-            style="font-size: 14px;">
-                <img 
-                class="max-w-full m-auto filter invert lozad" 
-                data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-03.png" 
-                style="width: 100px;">
-                <br>
-                18 x 36 x 32 cm
-            </div>
-            <div 
-            class="text-center md:w-36 w-1/2 font-medium" 
-            style="font-size: 14px;">
-                <img 
-                class="max-w-full m-auto filter invert lozad" 
-                data-src="https://www.tsume-art.com/storage/app/media/ikigai/site/picto-caracteristique-04.png" 
-                style="width: 100px;">
-                <br>
-                Q4 2022 - Q3 2023
+            <div class="w-full bg-white rounded-lg overflow-hidden">
+                <h3
+                class="text-white text-xl font-bold bg-black pb-6">REVEAL</h3>
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/6NO_ocsFNzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-
-        </div>
+        <p
+        class="max-w-6xl mx-auto text-white bg-black px-10 py-3 text-center text-base">The smoke, sounds and voices of the following video are only for promotional purposes. They are not included in the product.</p>
     </section>
+    <!-- 尾部 -->
+    <footer 
+    class="py-10 flex justify-center items-center text-sm font-light" 
+    style="background-color: #252525;color: #a7a6a6">
+        <div class="max-w-3xl w-4/5">
+        <p class="italic md:px-0 my-12 text-justify">* : All our products are collectible statues, not toys, they are for people aged 14 and older. All parts are manufactured in limited edition. The statues offered for sale are those presented on the website of the TSUME LTD. within the limit of available stocks. Descriptions, information and photographs presenting the figures are the most accurate reproduction possible, but are for illustrative purposes and have no contractual value. In an effort to constantly improve the quality of its products, the TSUME LTD. may have to have to change the patterns of its products.</p>
 
-    <footer class="py-10 flex justify-center items-center text-sm font-light" style="background-color: #252525;color: #a7a6a6">
-    <div class="max-w-3xl w-4/5">
-    <p class="italic md:px-0 my-12 text-justify">* : All our products are collectible statues, not toys, they are for people aged 14 and older. All parts are manufactured in limited edition. The statues offered for sale are those presented on the website of the TSUME LTD. within the limit of available stocks. Descriptions, information and photographs presenting the figures are the most accurate reproduction possible, but are for illustrative purposes and have no contractual value. In an effort to constantly improve the quality of its products, the TSUME LTD. may have to have to change the patterns of its products.</p>
+        <div class="text-center text-xs">
+            <a href="" class="underline">Cookie Policy</a>
+            -
+            <a href="" class="underline">Terms of sale</a>
+        </div>
 
-    <div class="text-center text-xs">
-        <a href="" class="underline">Cookie Policy</a>
-        -
-        <a href="" class="underline">Terms of sale</a>
-    </div>
+        <p class="text-center text-xs my-1">All rights reserved. All other logos, products and company names mentioned are trademarks of their respective owners.</p>
 
-    <p class="text-center text-xs my-1">All rights reserved. All other logos, products and company names mentioned are trademarks of their respective owners.</p>
-
-    <p class="text-center text-xs">Copyright © Tsume 2010-2019</p>
-    </div>
+        <p class="text-center text-xs">Copyright © Tsume 2010-2019</p>
+        </div>
     </footer>
-
     <!-- 返回頂部 -->
         <div class="bg-gray-600" x-data="topBtn">
             <button @click="scrolltoTop" id="topButton"
@@ -494,29 +433,28 @@
             </button>
         </div>
     </div>
-
+<!-- 套件 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
 <script>
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    const observer = lozad(); 
     observer.observe();
-
+    // *
     setTimeout(function(){
         $('.loader_bg').fadeToggle();
     },900);
-
+    // *
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
       once: true,
       mirror: false
     });
-
+    // *
     document.addEventListener('alpine:init', () => {
         Alpine.data('topBtn', () => ({
             scrolltoTop() {
@@ -525,21 +463,20 @@
             }
         }));
     });
-
+    // *
     var topBtn = document.getElementById("topButton");
     window.onscroll = function () {
         (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ?
         topBtn.classList.remove("hidden"): topBtn.classList.add("hidden");
 
     }
-
+    // *
     const btn = document.querySelector(".mobile-menu-button");
     const sidebar = document.querySelector(".sidebar");
-
     btn.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-x-full");
     });
-
+    // *
     const swiper = new Swiper('.swiper', {
      lazy: true,
      loop: true,
@@ -556,16 +493,13 @@
       },
 
     });
-
-
+    // *
     $('#Gotop').click(function(){     
         $('html,body').animate({scrollTop: $('.bg2').offset().top }, 'slow');    
     });  
     $('#Godown').click(function(){     
         $('html,body').animate({scrollTop: $('.bg3').offset().top }, 'slow');    
     });  
-    
 </script>
-
 </body>
 </html>
