@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+ 
+</head>
+<body>
+
+<div id="app flex justify-center">
+    <div id="ant" class="w-48">
+        <img src="https://drive.google.com/file/d/1pJ7mGvWBgg_eCpJQ3VZbBvq2HUFojkNt/view?usp=sharing">
+    </div>
+    <div id="obt" class="hidden w-48">
+        <img src="https://drive.google.com/file/d/1pJ7mGvWBgg_eCpJQ3VZbBvq2HUFojkNt/view?usp=sharing">
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+
+<script>
+
+$(window).keydown(function(evt){
+  console.log(evt.key)
+  if (evt.ctrlKey) {
+    if (evt.key == "a") { // 'A' or 'a'
+    alert('你使用按建 Ctrl+a');
+    $("#ant").removeClass("hidden");
+    $("#obt").addClass("hidden");
+    }
+  }
+    if (evt.ctrlKey) {
+    if (evt.key == "s") { // 'A' or 'a'
+    alert('你使用按建 Ctrl+s');
+    $("#obt").removeClass("hidden");
+    $("#ant").addClass("hidden");
+    }
+  }
+  // if (evt.key == "t") {
+  //   alert('123');
+  //   $("#ant").removeClass("hidden");
+  //   $("#obt").addClass("hidden");
+  // }
+  // if (evt.key == "w"){
+  //   $("#obt").removeClass("hidden");
+  //   $("#ant").addClass("hidden");
+  // }
+})
+</script>
+</body>
+</html>
